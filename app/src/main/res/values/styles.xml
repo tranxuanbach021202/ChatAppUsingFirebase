@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="btnSolidRounded_8">
+        <item name="android:textSize">@dimen/_20sp</item>
+        <item name="android:background">@drawable/rectangle_radius_8dp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+
+    </style>
+
+    <style name="edSolid_10dp">
+        <item name="android:textSize">@dimen/_15pxh</item>
+        <item name="android:textColor">@color/gray_400</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:background">@drawable/rectangle_radius_ed_10dp</item>
+    </style>
+
+    <style name="txtFragmentMessage">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rectangle_radius_20</item>
+    </style>
+
+    <style name="txtProfile">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/black_900</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="rdProfile">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/bluegray_401</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+</resources>

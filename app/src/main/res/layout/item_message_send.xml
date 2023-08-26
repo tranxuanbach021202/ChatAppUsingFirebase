@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="message"
+            type="com.example.chatappfirebase.data.models.Message" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/txt_time"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="timee" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:id="@+id/view_message_text"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/_200pxh"
+                android:layout_marginTop="@dimen/_10pxh"
+                android:textColor="@color/white"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:padding="@dimen/_10pxh"
+                android:background="@drawable/rectangle_txt_message_send"
+                tools:text="nullllllllllfskdfksdfksdkfkskdasdkaksdkkaskdkkkdaskddaksddfkfs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sending"
+                android:id="@+id/txt_sending"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10pxh"
+                android:layout_marginEnd="@dimen/_20pxh" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:id="@+id/view_message_image"
+            android:layout_marginTop="@dimen/_20pxh"
+            android:layout_marginEnd="@dimen/_20pxh"
+            app:cardCornerRadius="@dimen/_15pxh"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_150pxh"
+                android:id="@+id/imageview"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/no_avatar"
+                android:layout_height="@dimen/_100pxh"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

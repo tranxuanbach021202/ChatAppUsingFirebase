@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.chatappfirebase.data.models.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="#1F1F1F">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:background="#4D4C4E"
+            android:padding="@dimen/_15pxh"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_70pxh"
+                    app:cardCornerRadius="@dimen/_25pxh"
+                    android:layout_height="@dimen/_70pxh">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_avatar_user"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/_190pxh"
+                        android:textColor="#C8C8C8"
+                        android:textSize="@dimen/_20sp"
+                        android:id="@+id/txt_user_name"
+                        tools:text="null"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxh"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_fiber_manual_record_24"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_10pxh"
+                            tools:text="Active"
+                            android:id="@+id/txt_status_user"
+                            android:fontFamily="@font/manrope"
+                            android:textColor="#00FF85"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/voice_call"
+                    android:layout_gravity="center"
+                    android:src="@drawable/call" />
+                <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/zegocloud_voice_call"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/video_call"
+                    android:layout_marginStart="@dimen/_15pxh"
+                    android:src="@drawable/camera" />
+
+                <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/zegocloud_video_call"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/rv_message"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_message_receiver"
+                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#4D4C4E"
+                android:padding="@dimen/_15pxh"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_file"
+                    android:src="@drawable/baseline_attach_file_24"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_weight="1"
+                    android:hint="Enter message"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:id="@+id/ed_message"
+                    android:padding="@dimen/_10pxh"
+                    android:textSize="@dimen/_20sp"
+                    android:background="@drawable/rectangle_ed_txt_message"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_send_message"
+                    android:src="@drawable/baseline_near_me_24" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

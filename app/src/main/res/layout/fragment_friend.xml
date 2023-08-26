@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/backgroud_linner"
+        tools:context=".ui.home.friend.FriendFragment"
+        android:orientation="vertical"
+        android:id="@+id/view_fragment_friend"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_35sp"
+            android:layout_marginTop="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:text="Friend" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20pxh"
+            android:id="@+id/ed_search_user"
+            android:hint="   Search"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:padding="@dimen/_10pxh"
+            android:textColorHint="#504F50"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_10pxh"
+            android:background="@drawable/rectangle_ed_search"
+            android:layout_height="wrap_content"
+            android:autofillHints="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20pxh"
+            android:visibility="gone"
+            android:id="@+id/view_list_user"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/txtFragmentMessage"
+                android:id="@+id/txt_suggest"
+                android:padding="@dimen/_10pxh"
+                android:layout_height="wrap_content"
+                android:text="Suggest Friend"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20pxh"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_user_list"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/view_friend"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Friend"
+                android:id="@+id/txt_friend"
+                android:padding="10dp"
+                android:layout_marginTop="@dimen/_20pxh"
+                style="@style/txtFragmentMessage"
+                android:layout_height="wrap_content">
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20pxh"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_user_list_friend"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:id="@+id/view_friend_request"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txtFragmentMessage"
+                android:padding="10dp"
+                android:text="Friend Request"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rv_user_list_friend_request"
+                android:layout_marginTop="@dimen/_20pxh"
+                android:layout_height="@dimen/_250pxh"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

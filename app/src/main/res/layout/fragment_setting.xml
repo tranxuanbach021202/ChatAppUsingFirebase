@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.chatappfirebase.ui.home.setting.SettingViewModel" />
+
+        <variable
+            name="user"
+            type="com.example.chatappfirebase.data.models.User" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_40pxh"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_30pxh"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_100pxh"
+                    app:civ_border_width="3dp"
+                    app:civ_border_overlay="true"
+                    android:id="@+id/imageview_avatar"
+                    app:civ_border_color="#FFC32E"
+                    android:src="@drawable/img_avatar"
+                    android:layout_height="@dimen/_100pxh" />
+
+                <ImageButton
+                    android:layout_width="@dimen/_31pxh"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_31pxh"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxh"
+                    android:background="@drawable/rectangle_edit_img"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_edit" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30pxh"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txtProfile"
+                    android:text="User Name" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    style="@style/edSolid_10dp"
+                    android:layout_marginTop="@dimen/_10pxh"
+                    android:text="@{user.name}"
+                    android:id="@+id/ed_name"
+                    android:padding="@dimen/_15pxh"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    style="@style/txtProfile"
+                    android:layout_marginTop="@dimen/_20pxh" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/rg_gender"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rb_male"
+                        android:layout_marginStart="@dimen/_5pxh"
+                        android:text="Male"
+                        style="@style/rdProfile"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Famle"
+                        android:id="@+id/rb_famale"
+                        style="@style/rdProfile"
+                        android:layout_marginStart="@dimen/_20pxh"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Orther"
+                        android:id="@+id/rb_orther"
+                        style="@style/rdProfile"
+                        android:layout_marginStart="@dimen/_20pxh"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20pxh"
+                    android:text="Phone Number"
+                    style="@style/txtProfile" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_phone"
+                    android:text="@{user.phoneNumber}"
+                    style="@style/edSolid_10dp"
+                    android:padding="@dimen/_15pxh"
+                    android:hint="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    style="@style/txtProfile"
+                    android:layout_marginTop="@dimen/_20pxh" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_address"
+                    android:text="@{user.address}"
+                    style="@style/edSolid_10dp"
+                    android:padding="@dimen/_15pxh" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_40pxh"
+                android:id="@+id/btn_update"
+                android:layout_marginEnd="@dimen/_40pxh"
+                android:text="Update"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/btnSolidRounded_8"
+                android:layout_marginTop="@dimen/_40pxh" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_40pxh"
+                android:id="@+id/btnLogout"
+                style="@style/btnSolidRounded_8"
+                android:layout_marginTop="@dimen/_40pxh"
+                android:layout_marginEnd="@dimen/_40pxh"
+                android:text="Logout"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

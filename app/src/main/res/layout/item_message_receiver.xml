@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="message"
+            type="com.example.chatappfirebase.data.models.Message" />
+        <variable
+            name="userReceiver"
+            type="com.example.chatappfirebase.data.models.User"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_20pxh"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{message.timestamp}"
+            android:id="@+id/txt_time"
+            android:layout_gravity="center"
+            tools:text="time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10pxh"
+            android:id="@+id/view_message_text"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_51pxh"
+                app:cardCornerRadius="@dimen/_18pxh"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_51pxh">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_receiver"
+                    tools:src="@drawable/no_avatar"
+                    app:image="@{userReceiver.imgProfile}"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:maxWidth="@dimen/_200pxh"
+                android:id="@+id/txt_content"
+                android:textColor="#BABABA"
+                android:padding="@dimen/_10pxh"
+                android:text="@{message.content}"
+                android:background="@drawable/rectangle_txt_message_receiver"
+                android:layout_gravity="center"
+                tools:text="null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:id="@+id/view_message_image"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_20pxh"
+            app:cardCornerRadius="@dimen/_15pxh"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_150pxh"
+                android:src="@drawable/no_avatar"
+                android:id="@+id/imageview"
+                android:scaleType="centerCrop"
+                android:layout_height="@dimen/_100pxh"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
