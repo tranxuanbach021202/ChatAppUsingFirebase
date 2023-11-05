@@ -65,12 +65,5 @@
                 style="@style/btnSolidRounded_8" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-        <ProgressBar
-            android:layout_width="@dimen/_50pxh"
-            android:layout_height="@dimen/_50pxh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_30pxh"
-            android:progressTint="#7C01F6"
-            tools:ignore="MissingConstraints" />
     </FrameLayout>
 </layout>

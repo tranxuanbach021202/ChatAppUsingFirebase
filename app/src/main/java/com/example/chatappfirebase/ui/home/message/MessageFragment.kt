@@ -123,11 +123,11 @@ class MessageFragment : Fragment(){
                 is RepoResult.Success -> {
                     val a = it.data
                     Log.d(TAG, a.toString())
-                    if (it.data.isEmpty()) {
-                        binding.layoutRecents.visibility = View.GONE
-                    } else {
+                    if (!it.data.isEmpty()) {
                         binding.layoutRecents.visibility = View.VISIBLE
                         chatRoomAdapter.setData(it.data)
+                    } else {
+
                     }
                 }
                 is RepoResult.Error -> {

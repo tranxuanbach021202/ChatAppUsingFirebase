@@ -43,6 +43,7 @@ class SigupActivity : AppCompatActivity(){
         binding.btnSigup.setOnClickListener {
             if (checkOTP()) {
                 Log.d(TAG, "check otp successfully")
+                createAccount()
             } else {
                 Toast.makeText(this, "Please enter valid OTP", Toast.LENGTH_SHORT).show()
             }
@@ -133,6 +134,7 @@ class SigupActivity : AppCompatActivity(){
         val countDownTimer = object : CountDownTimer(60000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsRemaining = millisUntilFinished / 1000
+                Log.d(TAG, "onTick")
                 binding.txtCountDownTimer.text = secondsRemaining.toString()
 
 
@@ -145,7 +147,6 @@ class SigupActivity : AppCompatActivity(){
                 binding.txtCountDownTimer.visibility = View.GONE
             }
         }
-
         countDownTimer.start()
     }
 

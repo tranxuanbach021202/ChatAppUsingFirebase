@@ -165,7 +165,7 @@ class ChatFragment : Fragment() {
                 is RepoResult.Success -> {
                    checkChatRoom = it.data
                     Log.d("CreateChatRoom", it.data.toString())
-                    if (it.data) {
+                    if (!it.data) {
                         val message = Message()
                         createChatRoom(message!!)
                     }
@@ -233,6 +233,7 @@ class ChatFragment : Fragment() {
     }
 
     private fun updateLastMessage(message: Message) {
+        Log.d("Testt", "UpdateLastMessage")
         //update last message of receiver
         viewModel.updateLastMessage(receiverUser.uid!!, receiverRoom, message)
 
