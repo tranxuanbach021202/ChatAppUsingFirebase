@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
             if (data == true) {
                 navigationToScreen()
             } else {
-                Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Mật khẩu sai, vui nhập lại!", Toast.LENGTH_SHORT).show()
             }
         })
     }
