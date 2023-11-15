@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.chatappfirebase.BuildConfig
-import com.example.chatappfirebase.constants.Constants
 import com.example.chatappfirebase.databinding.ActivitySigupBinding
 import com.example.chatappfirebase.ui.profile.ProfileActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,7 +17,6 @@ import org.json.JSONObject
 import uk.co.jakebreen.sendgridandroid.SendGrid
 import uk.co.jakebreen.sendgridandroid.SendGridMail
 import uk.co.jakebreen.sendgridandroid.SendTask
-import java.io.IOException
 import kotlin.random.Random
 
 

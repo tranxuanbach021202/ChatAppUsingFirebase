@@ -13,9 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.bumptech.glide.Glide
-import com.example.chatappfirebase.constants.Constants
 import com.example.chatappfirebase.data.models.ChatRoom
 import com.example.chatappfirebase.data.models.Message
 import com.example.chatappfirebase.data.models.TypeMessage
@@ -23,15 +21,11 @@ import com.example.chatappfirebase.data.models.User
 import com.example.chatappfirebase.databinding.FragmentChatBinding
 import com.example.chatappfirebase.utils.RepoResult
 import com.google.firebase.auth.FirebaseAuth
-import com.zegocloud.uikit.prebuilt.call.config.ZegoNotificationConfig
-import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationConfig
-import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationService
 import com.zegocloud.uikit.service.defines.ZegoUIKitUser
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Collections
-import java.util.UUID
 import javax.inject.Inject
 
 @AndroidEntryPoint

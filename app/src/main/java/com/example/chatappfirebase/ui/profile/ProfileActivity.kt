@@ -14,15 +14,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.example.chatappfirebase.R
-import com.example.chatappfirebase.constants.Constants
-import com.example.chatappfirebase.constants.Constants.NO_AVATAR
+import com.example.chatappfirebase.core.Constants
 import com.example.chatappfirebase.data.models.User
 import com.example.chatappfirebase.data.models.UserStatus
 import com.example.chatappfirebase.databinding.ActivityRegisterProfileBinding
 import com.example.chatappfirebase.ui.home.HomeActivity
 import com.example.chatappfirebase.utils.RepoResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

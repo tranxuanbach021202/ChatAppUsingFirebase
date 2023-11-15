@@ -1,25 +1,17 @@
 package com.example.chatappfirebase.ui.home
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.hilt.work.HiltWorkerFactory
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.work.Data
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
 import com.example.chatappfirebase.BuildConfig
 import com.example.chatappfirebase.R
-import com.example.chatappfirebase.constants.Constants
 import com.example.chatappfirebase.data.models.UserStatus
 import com.example.chatappfirebase.databinding.ActivityHomeBinding
 import com.example.chatappfirebase.utils.RepoResult
-import com.example.chatappfirebase.worker.UpdateStatusWorker
 import com.google.firebase.auth.FirebaseAuth
 import com.zegocloud.uikit.prebuilt.call.config.ZegoNotificationConfig
 import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationConfig
